@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    background-color: aqua;
+    padding: 20px;
+    
+}
+.header h1{
+    text-align: center;
+}
+
+.main{
+    margin-top: 50px;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.364);
+    
+}
+
+#list-anot{
+    max-height: 350px;
+    overflow-y: auto;
+    background-color: rgb(168, 122, 208);
+    padding: 10px;
+}
+#list-anot div{
+    background: #a2a220;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.main > input{
+    width: 300px;
+    font: 20pt verdana;
+    padding: 5px;
+}
+.main button{
+    padding: 7px;
+    font-family: fantasy;
+}
