@@ -37,6 +37,9 @@
                     hora += 1
                     obj[0].innerHTML = hora
                     min = 0
+                    if (hora == 24){
+                        obj[0].innerHTML = '00'
+                    }
                 }
             }
             obj[2].innerHTML = seg
