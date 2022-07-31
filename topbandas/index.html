@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Metal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img  src="helloween-capa.png">
+    </header>
+    
+    <div class="container-main">
+        <div>
+            <h1>Top Metal</h1>
+            <h2>Só pedrada</h2>
+            <h3><a href="mar-marcelo.herokuapp.com">Portfólio</a></h3>
+        </div>
+        <img src="iron.png">
+    </div>
+
+    <div id="divisao"><span>Bandas Tops</span></div>
+
+    <span id="iframe">
+        <abbr title="Fechar video"><span>[X]</span></abbr>
+        <iframe frameborder="1" name="video"></iframe>
+    </span>
+    
+    <div class="banda">
+        <div>
+            <a href="https://player.vimeo.com/video/150713728" target="video"><h2>Dragonforce</h2></a>
+            <p>DragonForce é uma banda inglesa de power metal que surgiu em 1999, após o fim da banda de black metal, Demoniac. Todos os integrantes, exceto Lindsay Dawson, juntaram-se com ZP Theart e fundaram a banda, com o nome DragonHeart. <em><a href="https://pt.wikipedia.org/wiki/DragonForce" target="_blank" rel="external">Wikpédia</a></em></p>   
+        </div>
+        <img src="dragonforce.png" alt="">
+    </div>
+    <div class="banda">
+        <div>
+            <a href="https://player.vimeo.com/video/31319433" target="video"><h2>Blind Guardian</h2></a>
+            <p>Blind Guardian é uma banda de power metal formada no ano de 1984, em Krefeld, na Alemanha. Antes de adotarem o nome Blind Guardian, os músicos da formação original lançaram duas demos com o nome Lucifer's Heritage, em 1985 e 1986. <em><a href="https://pt.wikipedia.org/wiki/Blind_Guardian" target="_blank" rel="external">Wikpédia</a></em></p>   
+        </div>
+        <img src="blindguardian.png">
+    </div>
+    <div class="banda">
+        <div>
+            <a href="https://www.youtube.com/embed/Pwv-FGhqwpw" target="video"><h2>Freedom Call</h2></a>
+            <p>Freedom Call é um banda de power metal alemã formada em 1998 por Chris Bay e Dan Zimmermann. <em><a href="https://pt.wikipedia.org/wiki/Freedom_Call" target="_blank" rel="external">Wikpédia</a></em></p>   
+        </div>
+        <img src="FreedomCall.png">
+    </div>
+    <div class="banda">
+        <div>
+            <a href="https://player.vimeo.com/video/225193931" target="video"><h2>Avantasia</h2></a>
+            <p>Avantasia pronúncia: é um projeto musical capitaneado por Tobias Sammet, vocalista e principal compositor da banda de heavy metal alemã Edguy; seu nome é a junção de duas palavras: Avalon e Fantasia. <em><a href="https://pt.wikipedia.org/wiki/Avantasia" target="_blank" rel="external">Wikpédia</a></em></p>   
+        </div>
+        <img src="Avantasia_Logo.png">
+    </div>
+    <div class="banda">
+        <div>
+            <a href="https://player.vimeo.com/video/9515659" target="video"><h2>Sabaton</h2></a>
+            <p>Sabaton é uma banda de power metal sueca, formada em 1999. O grupo é conhecido por ter letras com relação a guerras históricas. Em suas apresentações, eles utilizam uma imitação de um tanque de guerra, que pesa duas toneladas e possui um kit de bateria montado em cima. <em><a href="https://pt.wikipedia.org/wiki/Sabaton" target="_blank" rel="external">Wikpédia</a></em></p>   
+        </div>
+        <img src="babaton-logo.png">
+    </div>
+
+    <div class="formulario">
+        <h3>Envie uma mensagem preechendo o formulário abaixo</h3>
+        <form action="index.html" id="form-campos">
+            <div>
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu Nome">
+            </div>
+
+            <div>
+                <label for="telefone">Seu Telefone:</label>
+                <input type="tel" maxlength="20" id="telefone" placeholder="Digite seu Telefone">
+            </div>
+
+            <div>
+                <label for="email" >Seu Email:</label>
+                <input type="email" placeholder="Digite seu Email" id="email">
+            </div>
+
+            <div>
+                <h4>Deseja receber nossas novidades?</h4>
+                <span>
+                    <input type="radio" name="novis" id="sim" checked>
+                    <label for="sim">Sim</label>
+                </span>
+                
+                <span>
+                    <input type="radio" id="nao" name="novis">
+                    <label for="nao">Não</label>
+                </span>
+                
+            </div>
+
+            <textarea placeholder="Deixe uma Mensagem"></textarea>
+            <button onclick="enviar()">ENVIAR</button>
+        </form>
+    </div>
+
+    <footer class="rodape">
+        <div>
+            <h3>contatos</h3>
+            <a href="https://marcelo.araujo.999s@gmail.com">marcelo.araujo.999s@gmail.com</a>
+        </div>
+        <div>
+            <h3>Redes</h3>
+            <a href="#"><img src="instagram.svg" alt="">Instagram</a>
+            <a href="https://www.linkedin.com/in/marcelo-araujo-2026841b4/"><img src="likedinIcon.svg" alt=""> Linkedin</a>
+        </div>
+        <div>
+            <h3>Repositórios</h3>
+            <a href="https://github.com/marcelo-py"><img src="Octocat.png" alt=""> Github</a>
+        </div>
+    </footer>
+
+    <script>
+        var iframe = document.getElementById('iframe')
+        var iframe_video = document.querySelector('#iframe iframe')
+        var fechar = document.querySelector('#iframe span')
+        var banda_link = document.querySelectorAll('.banda a')
+        var nome_form = document.getElementById('nome')
+        fechar.addEventListener('click', fecharVideo)
+        for (let b in banda_link){
+            banda_link[b].addEventListener('click', abrirVideo)
+        }
+
+        function abrirVideo(){
+            iframe.style.display = 'block'
+        }
+        function fecharVideo(){
+            iframe.style.display = 'none'
+            iframe_video.src = ''
+        }
+        function enviar(){
+            if (nome_form.value.length < 1){
+                alert('Campo nome do formulario não pode ficar vazio!')
+            }else{
+                alert(`Mensagem de ${nome.value} Enviada!`)
+            }
+            
+        }
+    </script>
+</body>
+</html>
